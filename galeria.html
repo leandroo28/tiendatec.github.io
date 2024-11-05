@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TINDA TECNOLOGICA</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <!-- Cambié el h1 por una etiqueta <img> para mostrar el logo -->
+                <img class="logo" src="img/descarga.png" alt="Logo de PageTec">
+            </div>
+         
+            <div class="menu">
+                <div class="icon">
+                    <h1 class="logo">page<span>tec</span></h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="galeria.html">GALERY</a></li>
+                    <li><a href="contacto.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search-cart">
+                <div class="search">
+                    <div class="search">
+                        <input class="srch" type="search" id="searchInput" placeholder="Type to search" onkeyup="filterProducts()">
+                        <button class="btn" onclick="filterProducts()">Search</button>
+                    </div>
+                </div>
+                <div class="carrito">
+                    <h2>🛒</h2>
+                    <div id="items-carrito"></div>
+                    <div id="total">Total: $0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contenido" id="productList">
+        <div class="mostrador"  id="mostrador">
+            <div class="fila">
+                <div class="item"  onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/ipne16.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Iphone 16</p>
+                    <span class="precio">$ 1.300</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/macc.jpg" alt="">
+                    </div>
+                    <p class="descripcion" id>Mac Book</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/xiaomi.webp" alt="">
+                    </div>
+                    <p class="descripcion">Xiomi redmi note 12s</p>
+                    <span class="precio">$ 3.600</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/ipad.webp" alt="">
+                    </div>
+                    <p class="descripcion">Ipad</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/tab s9.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Samsun Tab s9</p>
+                    <span class="precio">$ 130</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/razer.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Razer blade pro 17</p>
+                    <span class="precio">$ 2.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/airpods.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Air pods</p>
+                    <span class="precio">$ 2.500</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img class="img-galery" src="img/watch.png" alt="">
+                    </div>
+                    <p class="descripcion">Apple watch</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="img/" alt="" id="img">
+                <h2 id="mo">=</h2>
+                <p id="descripcion">Descripción Modelo </p>
+    
+
+                <span class="precio" id="precio">$ 130</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">color</label>
+                        <select name="" id="">
+                            <option value="">azul</option>
+                            <option value="">rojo</option>
+                            <option value="">rosa</option>
+                            <option value="">dorado</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="agregarAlCarrito('Pe', 999)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>page<span>tec</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">GALERY</a>
+                |
+                <a href="#">CONTACT</a>
+                |
+            </p>
+
+            <p class="footer-company-name">Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ghaziabad</span>
+                    Delhi</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 74**9**258</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>Lorem ipsum dolor sit </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed, labore i
+                Effects along with
+                HTML, JavaScript and Projects using C/C++.
+            </p>
+            <div class="footer-icons">
+                <a  href="#"><img class="img-redes" src="img/instagram (1).png" alt=""></a>
+                <a  href="#"><img class="img-redes" src="img/facebook (3).png" alt=""></a>
+                <a  href="#"><img class="img-redes" src="img/gorjeo (1).png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

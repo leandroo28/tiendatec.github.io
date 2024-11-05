@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TINDA TECNOLOGICA</title>
+</head>
+<body>
+    <div>
+        <div class="main">
+            <div class="navbar">
+                
+                <div class="icon">
+                    <!-- Cambié el h1 por una etiqueta <img> para mostrar el logo -->
+                    <img class="logo" src="img/descarga.png" alt="Logo de PageTec">
+                </div>
+                
+                <div class="menu">
+                    <div class="icon">
+                        <h1 class="logo">page<span>tec</span></h1>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="galeria.html">GALERY</a></li>
+                        <li><a href="contacto.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="search-cart">
+                    <div class="search">
+                        <div class="search">
+                            <input class="srch" type="search" id="searchInput" placeholder="Type to search" onkeyup="filterProducts()">
+                            <button class="btn" onclick="filterProducts()">Search</button>
+                        </div>
+                    </div>
+                    <div class="carrito">
+                        <h2>🛒</h2>
+                        <div id="items-carrito"></div>
+                        <div id="total">Total: $0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Imagen de Anuncio -->
+        <div class="ad-banner">
+            <div class="slider">
+                <div class="slides">
+                    <img src="img/fondoo.png" alt="Anuncio 1" />
+                    <img src="img/fondo2.webp" alt="Anuncio 2" />
+                    <img src="img/fondo3.webp" alt="Anuncio 3" />
+                    <img src="img/fondo4.webp" alt="Anuncio 3" />
+                    <img src="img/fondo5.webp" alt="Anuncio 3" />
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Productos Tecnológicos</h2>
+            <div class="productos" id="productList">
+                <div class="producto">
+                    <img src="img/iphone 13.jpg" alt="iPhone 13 Pro">
+                    <div class="producto-info">
+                        <div class="producto-nombre">iPhone 13 Pro</div>
+                        <div class="producto-precio">$999</div>
+                        <div class="producto-descripcion">Potente smartphone con cámara triple, pantalla Super Retina XDR y chip A15</div>
+                        <button class="btn" onclick="agregarAlCarrito('iPhone 13 Pro', 999)">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/mac.jpg" alt="MacBook Air M1">
+                    <div class="producto-info">
+                        <div class="producto-nombre">MacBook Air M1</div>
+                        <div class="producto-precio">$1299</div>
+                        <div class="producto-descripcion">Ultraligero y potente con el revolucionario chip M1 de Apple, perfecto para</div>
+                        <button class="btn" onclick="agregarAlCarrito('MacBook Air M1', 1299)">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/samsung watch.jpg" alt="Samsung Galaxy Watch 4">
+                    <div class="producto-info">
+                        <div class="producto-nombre">Samsung Galaxy Watch </div>
+                        <div class="producto-precio">$249</div>
+                        <div class="producto-descripcion">Smartwatch avanzado con monitoreo de salud, GPS y compatibilidad con Android.</div>
+                        <button class="btn" onclick="agregarAlCarrito('Samsung Galaxy Watch 4', 249)">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/audifonos.jpg" alt="Sony WH-1000XM4">
+                    <div class="producto-info">
+                        <div class="producto-nombre">Sony WH-1000XM4</div>
+                        <div class="producto-precio">$349</div>
+                        <div class="producto-descripcion">Auriculares inalámbricos con cancelación de ruido líder en la industria.</div>
+                        <button class="btn" onclick="agregarAlCarrito('Sony WH-1000XM4', 349)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>page<span>tec</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">GALERY</a>
+                |
+                <a href="#">CONTACT</a>
+                |
+            </p>
+
+            <p class="footer-company-name">Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ghaziabad</span>
+                    Delhi</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 74**9**258</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>Lorem ipsum dolor sit </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed, labore i
+                Effects along with
+                HTML, JavaScript and Projects using C/C++.
+            </p>
+            <div class="footer-icons">
+                <a  href="#"><img class="img-redes" src="img/instagram (1).png" alt=""></a>
+                <a  href="#"><img class="img-redes" src="img/facebook (3).png" alt=""></a>
+                <a  href="#"><img class="img-redes" src="img/gorjeo (1).png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
